@@ -1,0 +1,54 @@
+:host {
+    main {
+        margin:0;
+        padding:0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+            margin: -10px 0 0 0;
+            span {
+                color: rgb(185, 185, 255);
+            }
+        }
+        .line {
+            width: 90%;
+            background-color: black;
+            height: 2px;
+            // margin: -10px 0 0 0;
+        }
+        table{
+            background-color:#000;
+            border: none;
+            border-radius: 5px;
+            tr {
+                border: none;
+                td {
+                    border: none;
+                    margin: 0px;
+                    padding: 0;
+                    input {
+                        width: 150px;
+                        height: 150px;
+                        font-size: 6rem;
+
+                        background-color: #FFF;
+                        
+                        text-align: center;
+                        border:none;
+                    }
+                    input:hover {
+                        cursor: pointer;
+                    }
+                    input:focus {
+                        outline: none;
+                        outline-style: solid;
+                        box-shadow: none;
+                        color: rgb(185, 185, 255);
+                    }
+                }
+            }
+        }
+    }
+}

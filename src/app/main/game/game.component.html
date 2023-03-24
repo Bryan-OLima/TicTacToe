@@ -1,0 +1,62 @@
+<main>
+    <div class="score">
+        <div class="x">
+
+        </div>
+        <div class="o">
+
+        </div>
+    </div>
+    <h1>
+        Welcome to Tic Tac Toe Game
+    </h1>
+    <div class="line"></div>
+    <h2 *ngIf="!message; else elseBlock">
+        It's Player <span>{{playerTurn}}</span> turn
+    </h2>
+    <ng-template #elseBlock>
+        <h2>
+            {{message}}
+        </h2>
+    </ng-template>
+    <table>
+         <tr>
+            <td *ngFor="let play of game.lineOne; index as i">
+                <input 
+                    class="square" 
+                    value="{{play.value}}" 
+                    (click)="pickSquare(i,'lineOne')"
+                    [disabled]="gameOver"
+                    readonly
+                />
+                <!-- {{play.name}} -->
+            </td>
+        </tr> 
+
+        <tr>
+            <td *ngFor="let play of game.lineTwo; index as i">
+                <input 
+                    class="square" 
+                    value="{{play.value}}" 
+                    (click)="pickSquare(i,'lineTwo')"
+                    [disabled]="gameOver"
+                    readonly
+                />
+                <!-- {{play.name}} -->
+            </td>
+        </tr>
+
+        <tr>
+            <td *ngFor="let play of game.lineThree; index as i">
+                <input 
+                    class="square" 
+                    value="{{play.value}}" 
+                    (click)="pickSquare(i,'lineThree')"
+                    [disabled]="gameOver"
+                    readonly
+                />
+                <!-- {{play.name}} -->
+            </td>
+        </tr>
+    </table>
+</main>
